@@ -2,6 +2,10 @@ import "@/assets/styles/globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AuthProvider from "@/components/AuthProvider";
+import { ToastContainer } from 'react-toastify';
+// import { GlobalProvider } from '@/context/GlobalContext';
+import '@/assets/styles/globals.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const metadata = {
   title: "PropertyHub | Find the Perfect Rental Property",
@@ -18,6 +22,7 @@ const MainLayout = ({ children }) => {
           <Navbar />
           <main>{children}</main>
           <Footer />
+          <ToastContainer />
         </body>
       </html>
     </AuthProvider>
