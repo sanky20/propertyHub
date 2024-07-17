@@ -31,6 +31,8 @@ export const GET = async () => {
   }
 };
 
+
+// POST /api/bookmarks 
 export const POST = async (request) => {
   try {
     await connectDB();
