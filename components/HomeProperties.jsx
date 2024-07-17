@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link';
 import PropertyCard from '@/components/PropertyCard';
 import { fetchProperties } from '@/utils/requests';
