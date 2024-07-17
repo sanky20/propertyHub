@@ -2,13 +2,16 @@
 import Link from 'next/link';
 import PropertyCard from '@/components/PropertyCard';
 import { fetchProperties } from '@/utils/requests';
+import {useEffect} from 'React';
 
 const HomeProperties = async () => {
   const data = await fetchProperties();
-
-  const recentProperties = data.properties
-    .sort(() => Math.random() - Math.random())
-    .slice(0, 3);
+  let recentProperties = []
+ useEffect(()=> {
+   recentProperties = data.properties
+  .sort(() => Math.random() - Math.random())
+  .slice(0, 3);
+ },[data])
 
   return (
     <>
