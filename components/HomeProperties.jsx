@@ -1,17 +1,16 @@
-'use client'
 import Link from 'next/link';
 import PropertyCard from '@/components/PropertyCard';
 import { fetchProperties } from '@/utils/requests';
-import {useEffect} from 'react';
+// import {useEffect, useState} from 'react';
 
 const HomeProperties = async () => {
   const data = await fetchProperties();
-  let recentProperties = []
- useEffect(()=> {
-   recentProperties = data.properties
+  let recentProperties = data.properties
   .sort(() => Math.random() - Math.random())
   .slice(0, 3);
- },[data])
+//  useEffect(()=> {
+   
+//  },[data])
 
   return (
     <>
