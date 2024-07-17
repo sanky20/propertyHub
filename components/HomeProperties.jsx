@@ -5,13 +5,13 @@ import { fetchProperties } from '@/utils/requests';
 
 const HomeProperties = async () => {
   // const data = await fetchProperties();
-  let recentProperties = data.properties
-  .sort(() => Math.random() - Math.random())
-  .slice(0, 3);
+  // let recentProperties = data.properties
+  // .sort(() => Math.random() - Math.random())
+  // .slice(0, 3);
 //  useEffect(()=> {
    
 //  },[data])
- recentProperties = []
+ let recentProperties = []
   return (
     <>
       <section className='px-4 py-6'>
