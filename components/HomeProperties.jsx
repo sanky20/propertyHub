@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import PropertyCard from '@/components/PropertyCard';
 import { fetchProperties } from '@/utils/requests';
-import {useEffect} from 'React';
+import {useEffect} from 'react';
 
 const HomeProperties = async () => {
   const data = await fetchProperties();
