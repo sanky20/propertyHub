@@ -11,7 +11,7 @@ async function fetchProperties({ showFeatured = false } = {}) {
 
     const res = await fetch(
       `${apiDomain}/properties${showFeatured ? "/featured" : ""}`,
-      { cache: "no-store" }
+      { next: { revalidate: 0 }
     );
 
     if (!res.ok) {
